@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 const Remotedev = require('remotedev');
 const RemotedevServer = require('remotedev-server');
 const express = require('express');

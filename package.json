@@ -1,6 +1,6 @@
 {
   "name": "remotedev-proxy",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A simple HTTP proxy for redux devtools remotedev server",
   "main": "main.js",
   "bin": {
