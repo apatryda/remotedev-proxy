@@ -1,0 +1,33 @@
+{
+  "name": "remotedev-proxy",
+  "version": "0.0.1",
+  "description": "A simple HTTP proxy for redux devtools remotedev server",
+  "main": "main.js",
+  "bin": {
+    "remotedev-proxy": "main.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apatryda/remotedev-proxy.git"
+  },
+  "keywords": [
+    "redux",
+    "devtools",
+    "remotedev",
+    "proxy"
+  ],
+  "author": "Artur Nerkowski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apatryda/remotedev-proxy/issues"
+  },
+  "homepage": "https://github.com/apatryda/remotedev-proxy#readme",
+  "dependencies": {
+    "express": "4.16.2",
+    "remotedev": "0.2.7",
+    "remotedev-server": "0.2.4"
+  }
+}
