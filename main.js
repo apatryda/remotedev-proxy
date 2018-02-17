@@ -9,15 +9,10 @@ RemotedevServer({ hostname: 'localhost', port: 8000 }).then(sc => sc.on('ready',
   app
     .use(express.json())
     .post('/init', (req, res, next) => {
-      const { state } = req.body;
+      const { action, state } = req.body;
 
-      if (!state) {
-        res.status(400).json({ error: 'state not present' });
-        return;
-      }
-
-      remotedev.init(state);
-      res.status(200).json({});
+      remotedev.init(state, action);
+      res.status(204).send();
     })
     .post('/state', (req, res, next) => {
       const { state } = req.body;
@@ -28,18 +23,18 @@ RemotedevServer({ hostname: 'localhost', port: 8000 }).then(sc => sc.on('ready',
       }
 
       remotedev.send(undefined, state);
-      res.status(200).json({});
+      res.status(204).send();
     })
     .post('/action', (req, res, next) => {
       const { action, state } = req.body;
 
-      if (!state) {
-        res.status(400).json({ error: 'action or state not present' });
+      if (!action) {
+        res.status(400).json({ error: 'action not present' });
         return;
       }
 
       remotedev.send(action, state);
-      res.status(200).json({});
+      res.status(204).send();
     })
     .listen(7999)
   ;
