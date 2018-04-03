@@ -7,7 +7,9 @@ const app = express();
 RemotedevServer({ hostname: 'localhost', port: 8000 }).then(sc => sc.on('ready', () => {
   const remotedev = Remotedev.connect({ hostname: 'localhost', port: 8000 });
   app
-    .use(express.json())
+    .use(express.json({
+      limit: '16mb',
+    }))
     .post('/init', (req, res, next) => {
       const { action, state } = req.body;
 
