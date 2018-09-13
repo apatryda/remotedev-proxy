@@ -4,7 +4,7 @@ const RemotedevServer = require('remotedev-server');
 const express = require('express');
 const app = express();
 
-RemotedevServer({ hostname: 'localhost', port: 8000 }).then(sc => sc.on('ready', () => {
+RemotedevServer({ port: 8000 }).then(sc => sc.on('ready', () => {
   const remotedev = Remotedev.connect({ hostname: 'localhost', port: 8000 });
   app
     .use(express.json({

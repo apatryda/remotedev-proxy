@@ -1,6 +1,6 @@
 {
   "name": "remotedev-proxy",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A simple HTTP proxy for redux devtools remotedev server",
   "main": "main.js",
   "bin": {
@@ -26,8 +26,8 @@
   },
   "homepage": "https://github.com/apatryda/remotedev-proxy#readme",
   "dependencies": {
-    "express": "4.16.2",
+    "express": "4.16.3",
     "remotedev": "0.2.7",
-    "remotedev-server": "0.2.4"
+    "remotedev-server": "0.2.5"
   }
 }
